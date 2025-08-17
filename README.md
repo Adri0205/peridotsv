@@ -37,10 +37,4 @@ Más información en: [Licencia CC0 1.0](https://creativecommons.org/publicdomai
 
 ---
 
-## ✅ Proceso de Cierre
-
-- Confirmación de todos los entregables en GitHub.  
-- Verificación de la documentación final (PDF y README).  
-- Validación del despliegue en el clúster de Kubernetes.  
-
 Con lo anterior se da por concluido el proyecto y se procede al cierre formal.
