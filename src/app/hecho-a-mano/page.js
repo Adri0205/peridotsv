@@ -1,12 +1,10 @@
 import { getPulseras } from "@/services/get-pulseras";
-import styles from "./page.module.css";
 
-export default async function Home() {
+export default async function HechoM() {
   const pulseras = await getPulseras();
   return (
-    <main className={styles.main}>
-      <h1> peridotsv </h1>
-
+    <main>
+      <h1> Pulseras hechas a mano </h1>
       <pre>
         <code>{JSON.stringify(pulseras, null, 2)}</code>
       </pre>
