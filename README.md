@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Proyecto Peridotsv
 
-## Getting Started
+Este repositorio contiene el desarrollo del proyecto **Peridot**, una plataforma web para la venta de joyería artesanal. El objetivo del proyecto es automatizar las ventas, permitir la personalización de productos y ampliar el alcance de la marca a través de un sistema en línea.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📑 Integrantes del equipo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Méndez Zelaya José Ricardo
+- Crespín Ramos Bryan Anderson
+- Cruz Ramírez Luis Enrique
+- Flores Hernández Adriana Eunice
+- Girón Cornejo Daniel Alexander
+- Lobo Chavarría Emmanuel Zenon
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Herramientas de Gestión
 
-## Learn More
+- [Tablero en Trello](https://trello.com/invite/b/68a1662f2a660c81da9dfca8/ATTIa7b1f9867b03f14ae350a1337e7efae8736E5DDC/mi-tablero-de-trello)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 Documentación
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Toda la documentación final del proyecto se encuentra en el archivo PDF adjunto a este repositorio.  
+Además, se incluye este **README** como guía principal para la navegación y comprensión del proyecto.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ⚖️ Licencia
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este proyecto se encuentra bajo la licencia **Creative Commons Zero v1.0 Universal (CC0 1.0)**.  
+Esto significa que el trabajo se ha dedicado al dominio público, por lo que puede ser copiado, modificado, distribuido y utilizado de manera libre, incluso con fines comerciales, sin necesidad de permiso.
+
+Más información en: [Licencia CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.es)
+
+---
+
+Con lo anterior se da por concluido el proyecto y se procede al cierre formal.
