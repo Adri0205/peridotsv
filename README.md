@@ -6,12 +6,8 @@ Este repositorio contiene el desarrollo del proyecto **Peridot**, una plataforma
 
 ## 📑 Integrantes del equipo
 
-- Méndez Zelaya José Ricardo
-- Crespín Ramos Bryan Anderson
-- Cruz Ramírez Luis Enrique
 - Flores Hernández Adriana Eunice
 - Girón Cornejo Daniel Alexander
-- Lobo Chavarría Emmanuel Zenon
 
 ---
 
