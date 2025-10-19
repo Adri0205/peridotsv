@@ -1,15 +1,15 @@
-import { getPulseras } from "@/services/get-pulseras";
-import styles from "./page.module.css";
+import Navbar from "./components/Navbar";
+import Gallery from "./components/Gallery";
+import Footer from "./components/Footer";
 
-export default async function Home() {
-  const pulseras = await getPulseras();
+export default function Home() {
   return (
-    <main className={styles.main}>
-      <h1> peridotsv </h1>
-
-      <pre>
-        <code>{JSON.stringify(pulseras, null, 2)}</code>
-      </pre>
-    </main>
+    <div className="min-h-screen">
+      <Navbar />
+      <main>
+        <Gallery />
+      </main>
+      <Footer />
+    </div>
   );
 }
