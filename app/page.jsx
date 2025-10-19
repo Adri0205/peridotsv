@@ -4,8 +4,10 @@ export default async function Home() {
   const pulseras = await getPulseras();
 
   return (
-    <pre>
-      <code>{JSON.stringify(pulseras, null, 2)}</code>
-    </pre>
+    <>
+      <pre>
+        <code>{JSON.stringify(pulseras, null, 2)}</code>
+      </pre>
+    </>
   );
 }
