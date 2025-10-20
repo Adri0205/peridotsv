@@ -18,6 +18,8 @@ export async function GET(request) {
 
     const pulseras = await getPulseras(searchTerm);
 
+    revalidatePath("/");
+
     return NextResponse.json({
       success: true,
       pulseras,

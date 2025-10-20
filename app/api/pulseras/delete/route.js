@@ -25,6 +25,8 @@ export async function DELETE(request) {
 
     const pulsera = await deletePulsera(id);
 
+    revalidatePath("/");
+
     return NextResponse.json({
       success: true,
       pulsera,

@@ -25,6 +25,8 @@ export async function PUT(request) {
 
     const pulsera = await updatePulsera(id, data);
 
+    revalidatePath("/");
+
     return NextResponse.json({
       success: true,
       pulsera,

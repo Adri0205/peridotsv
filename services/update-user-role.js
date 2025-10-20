@@ -6,7 +6,7 @@ export async function updateUserRole(userId, newRole) {
   }
 
   const result = await sql.query(
-    `UPDATE "user" SET role = $1, updated_at = NOW() WHERE id = $2 RETURNING *`,
+    `UPDATE "user" SET role = $1 WHERE id = $2 RETURNING *`,
     [newRole, userId]
   );
 
