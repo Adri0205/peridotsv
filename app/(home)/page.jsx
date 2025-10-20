@@ -6,7 +6,7 @@ import Footer from "./_components/Footer";
 
 export default async function Home() {
   const pulseras = await getPulseras();
-  const whatsappNumber = "50312345678"; // Número genérico
+  const whatsappNumber = "+50379261487"; // Número genérico
   const whatsappMessage = "¡Hola! Me interesa conocer más sobre sus pulseras.";
 
   return (
