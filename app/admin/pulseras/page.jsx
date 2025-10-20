@@ -4,8 +4,10 @@ import { useState, useEffect } from "react";
 import PulseraTable from "./_components/PulseraTable";
 import PulseraFormModal from "./_components/PulseraFormModal";
 import DeleteConfirmModal from "./_components/DeleteConfirmModal";
+import { useToast } from "../_components/ToastContext";
 
 export default function PulserasPage() {
+  const { addToast } = useToast();
   const [pulseras, setPulseras] = useState([]);
   const [filteredPulseras, setFilteredPulseras] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -40,7 +42,7 @@ export default function PulserasPage() {
       setFilteredPulseras(data.pulseras || []);
     } catch (error) {
       console.error("Error al cargar pulseras:", error);
-      alert("Error al cargar las pulseras");
+      addToast("Error al cargar las pulseras", "error");
     } finally {
       setIsLoading(false);
     }
@@ -80,17 +82,18 @@ export default function PulserasPage() {
         await fetchPulseras();
         setIsFormModalOpen(false);
         setSelectedPulsera(null);
-        alert(
+        addToast(
           id
             ? "Pulsera actualizada exitosamente"
-            : "Pulsera creada exitosamente"
+            : "Pulsera creada exitosamente",
+          "success"
         );
       } else {
-        alert("Error: " + data.error);
+        addToast("Error: " + data.error, "error");
       }
     } catch (error) {
       console.error("Error al guardar pulsera:", error);
-      alert("Error al guardar la pulsera");
+      addToast("Error al guardar la pulsera", "error");
     }
   };
 
@@ -106,13 +109,13 @@ export default function PulserasPage() {
         await fetchPulseras();
         setIsDeleteModalOpen(false);
         setSelectedPulsera(null);
-        alert("Pulsera eliminada exitosamente");
+        addToast("Pulsera eliminada exitosamente", "success");
       } else {
-        alert("Error: " + data.error);
+        addToast("Error: " + data.error, "error");
       }
     } catch (error) {
       console.error("Error al eliminar pulsera:", error);
-      alert("Error al eliminar la pulsera");
+      addToast("Error al eliminar la pulsera", "error");
     }
   };
 

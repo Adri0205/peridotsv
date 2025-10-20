@@ -3,8 +3,10 @@
 import { useState, useEffect } from "react";
 import UserTable from "./_components/UserTable";
 import ChangeRoleModal from "./_components/ChangeRoleModal";
+import { useToast } from "../_components/ToastContext";
 
 export default function UsuariosPage() {
+  const { addToast } = useToast();
   const [users, setUsers] = useState([]);
   const [filteredUsers, setFilteredUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -40,6 +42,7 @@ export default function UsuariosPage() {
       setFilteredUsers(data.users || []);
     } catch (error) {
       console.error("Error al cargar usuarios:", error);
+      addToast("Error al cargar usuarios", "error");
     } finally {
       setIsLoading(false);
     }
@@ -71,12 +74,13 @@ export default function UsuariosPage() {
         );
         setIsModalOpen(false);
         setSelectedUser(null);
+        addToast("Rol actualizado exitosamente", "success");
       } else {
-        alert("Error al actualizar el rol: " + data.error);
+        addToast("Error al actualizar el rol: " + data.error, "error");
       }
     } catch (error) {
       console.error("Error al actualizar rol:", error);
-      alert("Error al actualizar el rol del usuario");
+      addToast("Error al actualizar el rol del usuario", "error");
     }
   };
 
