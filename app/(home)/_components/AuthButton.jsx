@@ -1,16 +1,11 @@
 "use client";
 
-import { useSession, signIn, signOut } from "@/lib/auth-client";
+import { useSession, signOut } from "@/lib/auth-client";
+import Link from "next/link";
+import UserAvatar from "./UserAvatar";
 
 export default function AuthButton() {
   const { data: session, isPending } = useSession();
-
-  const handleSignIn = async () => {
-    await signIn.social({
-      provider: "google",
-      callbackURL: "/",
-    });
-  };
 
   const handleSignOut = async () => {
     await signOut({
@@ -36,13 +31,7 @@ export default function AuthButton() {
     return (
       <div className="flex items-center gap-3">
         <div className="flex items-center gap-3">
-          {session.user.image && (
-            <img
-              src={session.user.image}
-              alt={session.user.name || "Usuario"}
-              className="w-10 h-10 rounded-full border-2 border-emerald-200"
-            />
-          )}
+          <UserAvatar user={session.user} size="md" />
           <div className="hidden md:flex flex-col">
             <span className="font-semibold text-gray-900 text-sm">
               {session.user.name}
@@ -62,11 +51,11 @@ export default function AuthButton() {
 
   // Si no hay sesión, mostrar botón de inicio de sesión
   return (
-    <button
-      onClick={handleSignIn}
+    <Link
+      href="/login"
       className="px-6 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 transition-colors font-semibold"
     >
       Iniciar Sesión
-    </button>
+    </Link>
   );
 }

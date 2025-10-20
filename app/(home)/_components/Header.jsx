@@ -1,4 +1,5 @@
 import AuthButton from "./AuthButton";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -6,7 +7,10 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center gap-3">
+          <Link
+            href="/"
+            className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity"
+          >
             <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center">
               <svg
                 className="w-6 h-6 text-white"
@@ -23,7 +27,7 @@ export default function Header() {
               </svg>
             </div>
             <span className="text-2xl font-bold text-emerald-600">Peridot</span>
-          </div>
+          </Link>
 
           {/* Auth Button (Sign In / User Profile) */}
           <AuthButton />
