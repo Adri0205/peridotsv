@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/auth-utils";
 import { updatePulsera } from "@/services/update-pulsera";
+import { revalidatePath } from "next/cache";
 
 export async function PUT(request) {
   try {

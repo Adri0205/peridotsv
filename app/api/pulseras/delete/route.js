@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/auth-utils";
 import { deletePulsera } from "@/services/delete-pulsera";
+import { revalidatePath } from "next/cache";
 
 export async function DELETE(request) {
   try {
