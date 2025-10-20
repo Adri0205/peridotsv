@@ -1,18 +1,17 @@
 import { sql } from "@/lib/sql";
 
-export async function getPulseras(searchTerm = "") {
+export async function getUsuarios(searchTerm = "") {
   let query = `
-    SELECT * FROM pulseras
+    SELECT id, name, email, image, role
+    FROM "user"
   `;
 
   const params = [];
 
   if (searchTerm) {
-    query += ` WHERE nombre_producto ILIKE $1`;
+    query += ` WHERE name ILIKE $1 OR email ILIKE $1`;
     params.push(`%${searchTerm}%`);
   }
-
-  query += ` ORDER BY fecha_registro DESC`;
 
   const result = await sql.query(query, params);
 
